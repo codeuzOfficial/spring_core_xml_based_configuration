@@ -1,0 +1,23 @@
+<?xml version = "1.0" encoding = "UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+
+    <bean id="professor" class="dasturlash.uz.Professor">
+        <property name="name" value="Domlajon"/>
+        <property name="surname" value="Domlayev"/>
+    </bean>
+
+    <bean id="assistant" class="dasturlash.uz.Assistant">
+        <property name="name" value="Yordamchi"/>
+        <property name="surname" value="Yordamchiyev"/>
+    </bean>
+
+    <bean id="lesson" class="dasturlash.uz.Lesson">
+        <property name="name" value="Java"/>
+        <property name="professor" ref="professor"/>
+        <property name="assistant" ref="assistant"/>
+    </bean>
+
+</beans>
